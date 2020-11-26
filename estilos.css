@@ -8,10 +8,10 @@ body {
 		background-color:#FFF0C9;
 		width:900px;
 		}
-	#div_1
-	{
-	text-align:center;
-	}
+	.div_1
+		{
+		text-align:center;
+		}
 	#td_inicial
 		{
 		text-align:center;
@@ -73,7 +73,7 @@ body {
 		{
 		height:267px;
 		}
-	#salto_1
+	.salto_1
 		{
 		height:1em
 		}
@@ -91,7 +91,7 @@ body {
 		{
 		height:2em;
 		}
-	#negrita
+	.negrita
 		{
 		font-weight:bold;
 		}
@@ -106,7 +106,7 @@ body {
 		border-style:double;						
 		width:600px;
 		}
-	#salto_3
+	.salto_3
 		{
 		height:3em;
 		}
@@ -122,11 +122,11 @@ body {
 		{
 		background-color:#FFF0C9;
 		}
-	#borde_doble
+	.borde_doble
 		{
 		border-style:double;
 		}
-	#borde_solido
+	.borde_solido
 		{
 		border:1px solid black;
 		}
