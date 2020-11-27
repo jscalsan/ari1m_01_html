@@ -8,39 +8,32 @@ body {
 		background-color:#FFF0C9;
 		width:900px;
 		}
-	.div_1
+	#fondo
+		{
+		background-color:#FFF0C9;
+		}
+	.center
 		{
 		text-align:center;
 		}
-	#td_inicial
-		{
-		text-align:center;
-		}
-	h1
+	#h1
 		{
 		display:inline-block;
 		font-size:3em;
 		color:rgb(118,20,20);
 		}
-	#td_escarabajo
-		{
-		text-align:center;
-		}
 	#foto_escarabajo
 		{
-		width:600px;	
+		width:600px;" 
+		src="imagenes/escarabajo.jpg" alt="escarabajo"
 		}
-	#td_3
-		{
-		text-align:center;
-		}
-	#el_automovil_2
+	#El_ automovil
 		{
 		display:inline-block;
 		font-size:2em;
 		color:rgb(118,20,20);
 		}
-	#td_4
+	#ancho_900
 		{
 		width:900px;
 		}
@@ -48,7 +41,7 @@ body {
 		{
 		font-style:italic;
 		}
-	#subrayado
+	#subrayado	
 		{
 		text-decoration:underline;
 		}
@@ -64,32 +57,29 @@ body {
 		border:3px;
 		width:800px;
 		}
-	#td_5
+	#tabla_etiquetas2
 		{
 		width:200px;
 		text-align:left;
 		}
-	#foto_etiquetas
+	#foto_etiquetas	
 		{
 		height:267px;
 		}
-	.salto_1
+	.salto
 		{
-		height:1em
+		height:1em;
 		}
-	#tabla_etiquetas_2
+	#texto_etiquetas
 		{
 		background-color:#FFF0C9;
 		width:800px;
-		height:150px;
+		display:inline-block;
+		text-align:left;
 		}
-	#etiquetas_mediambientales_titulo3
+	#color_texto_etiquetas
 		{
 		color:rgb(187,37,37);
-		}
-	#salto_2
-		{
-		height:2em;
 		}
 	.negrita
 		{
@@ -98,6 +88,7 @@ body {
 	#clasificacion
 		{
 		color:rgb(187,37,37);
+		text-align:center;
 		}
 	#tabla_clasificacion
 		{
@@ -105,28 +96,41 @@ body {
 		background:url(imagenes/carretera.jpg);
 		border-style:double;						
 		width:600px;
+		display: inline-block;
 		}
-	.salto_3
+	#borde_doble_ancho
 		{
-		height:3em;
+		border-style:double;
+		width:300px;
 		}
-	#cuestionario
+	#borde_simple_ancho	
 		{
-		color:rgb(187,37,37);
+		border:1px solid black;
+		width:300px;
 		}
-	#URL_compañeros
+	.borde_negro
 		{
-		color:rgb(187,37,37);
-		}
-	#tabla_compañeros
-		{
-		background-color:#FFF0C9;
+		border:1px solid black;
 		}
 	.borde_doble
 		{
 		border-style:double;
 		}
-	.borde_solido
+	.salto3
 		{
-		border:1px solid black;
+		height:3em;
+		}
+	#linea_bloque
+		{
+		display:inline-block;
+		}
+	.color
+		{
+		color:rgb(187,37,37);
+		}
+	#tabla_url
+		{
+		background-color:#FFF0C9;
+		text-align:center;
+		display:inline-block;
 		}

@@ -13,10 +13,6 @@
 		background-color:#FFF0C9;
 		width:900px;
 		}
-	#fondo
-		{
-		background-color:#FFF0C9;
-		}
 	.center
 		{
 		text-align:center;
@@ -32,7 +28,7 @@
 		width:600px;" 
 		src="imagenes/escarabajo.jpg" alt="escarabajo"
 		}
-	#El_automovil
+	#El_ automovil
 		{
 		display:inline-block;
 		font-size:2em;
@@ -142,7 +138,9 @@
 	
 </style>
 </head>
-	<body id="fondo">
+	<body style=" 
+	background-color:#FFF0C9;
+	">
 	<div class="center">
 	<TABLE id="tabla_inicial">
 		<tr>
