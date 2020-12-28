@@ -26,9 +26,12 @@
 		}
 	calcular();
 	</script>
-	<?php
+
+<?php
+	if(isset($_GET['r'])){
+		$r = $_GET['r'];
+		$v = $_GET['v'];
+	echo 'Intensidad eléctrica: '.($v/$r);
 	
-	if(isset($_GET))print_r($_GET);
-	
-	
-	?>
+	}
+?>
