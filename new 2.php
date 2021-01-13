@@ -1,36 +1,36 @@
+
+<h3><center>Ejercicio 2</h3><image height=30% src="imagenes/piscina.jpg"/></center>
 <h2>Un estanque circular de 6m de radio está rodeado por un sendero de 1m de anchura. Halla el área del sendero</h2>
 <form>
-radio <input placeholder="radio" 
-	value="6" id="r" name="radio" onkeyup="calcular()"/>
-anchura <input placeholder="anchura"
-	value="1"/ id="a" name="anchura" onkeyup="calcular()">
-<button onclick="calcular()">Calcular</button>
+Radio estanque <input placeholder="radio" 
+	value="6" id="radio" name="radio" onkeyup="calcular2()"/>
+Anchura sendero <input placeholder="anchura"
+	value="1"/ id="anchura" name="anchura" onkeyup="calcular2()">
+<button onclick="calcular2()">Calcular</button>
 </form>
-<div id="sendero" style="
+<div id="superficie" style="
 	padding:20px;
 	background-color:pink;
 ">
-
 Resultado
-</div
-
-
+</div>
 
 <script>
-//alert('hola mundo');
-//console.log('hola otra vez');
-function calcular(){
-	r=document.getElementById('r').value;
-	a=document.getElementById('a').value;
-	sendero=((3.1416*((r+a)*(r+a)))-(3.1416*(r*r)));
-	document.getElementById('sendero').innerHTML=sendero+' m2';
+function calcular2(){
+	radio=document.getElementById('radio').value;
+	anchura=document.getElementById('anchura').value;
+	parseInt(radio);
+	parseInt(anchura);
+	superficie=((3.14*((parseInt(radio)+parseInt(anchura))*(parseInt(radio)+parseInt(anchura))))-(3.14*(parseInt(radio)*parseInt(radio))));
+	document.getElementById('superficie').innerHTML=superficie+' m2';
 }
-calcular();
+calcular2();
 </script>
+
 <?php
-if(isset($_GET['r'])){
-	$r = $_GET['r'];
-	$a = $_GET['a'];
-	echo 'superficie de sendero: '.((3.1416*(($r+$a)*($r+$a)))-(3.1416*($r*$r)));
+if(isset($_GET['radio'])){
+	$radio = $_GET['radio'];
+	$anchura = $_GET['anchura'];
+	echo 'Superficie de sendero: '.((3.14*(($radio+$anchura)*($radio+$anchura)))-(3.14*($radio*$radio)));
 }
 ?>
