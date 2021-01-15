@@ -170,7 +170,8 @@ calcular4();
 <?php
 if(isset($_GET['a'])){
 	$a = $_GET['a'];
-	echo 'Ancho: '.sqrt((($a*2)/9));
-	echo 'Largo: '.($a/(((sqrt(($a*2)/9)))*3));
+
+	echo 'Ancho (y): '.(round(sqrt((($a*2)/9)),2));
+	echo 'Largo (x): '.($a/(((sqrt(($a*2)/9)))*3));
 }
 ?>

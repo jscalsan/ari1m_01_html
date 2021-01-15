@@ -1,4 +1,4 @@
-<h2><center>Ejercicio 4</h2><center><image height=20% src="imagenes/parcela.jpg"/></center></center>
+<h2><center>Ejercicio 4</h2><center><image height=60% src="imagenes/parcela.jpg"/></center></center>
 <h3>Se desea vender un solar rectangular de 12.800 m2 dividiéndolo en tres parcelas rectangulares iguales. 
 Si se quieren vallar las lindes de las tres parcelas (los bordes y las separaciones de las parcelas), determina 
 las dimensiones del solar para que la longitud de la valla utilizada sea mínima</h3>
@@ -38,8 +38,10 @@ calcular4();
 <?php
 if(isset($_GET['a'])){
 	$a = $_GET['a'];
-	echo 'Ancho: '.sqrt((($a*2)/9));
-	echo 'Largo: '.($a/(((sqrt(($a*2)/9)))*3));
+
+	echo 'Ancho (y): '.(round(sqrt((($a*2)/9)),2));
+
+	echo 'Largo (x): '.($a/(((sqrt(($a*2)/9)))*3));
 }
 ?>
 
