@@ -1,14 +1,19 @@
-
-<h3><center>Ejercicio 2</h3><image height=30% src="imagenes/piscina.jpg"/></center>
-<h2>Un estanque circular de 6m de radio está rodeado por un sendero de 1m de anchura. Halla el área del sendero</h2>
+<h2><center>Ejercicio 4</h2><center><image height=20% src="imagenes/parcela.jpg"/></center></center>
+<h3>Se desea vender un solar rectangular de 12.800 m2 dividiéndolo en tres parcelas rectangulares iguales. 
+Si se quieren vallar las lindes de las tres parcelas (los bordes y las separaciones de las parcelas), determina 
+las dimensiones del solar para que la longitud de la valla utilizada sea mínima</h3>
 <form>
-Radio estanque <input placeholder="radio" 
-	value="6" id="radio" name="radio" onkeyup="calcular2()"/>
-Anchura sendero <input placeholder="anchura"
-	value="1"/ id="anchura" name="anchura" onkeyup="calcular2()">
-<button onclick="calcular2()">Calcular</button>
+Area m2 <input placeholder="Area" 
+	value="12800" id="a" name="a" onkeyup="calcular4()"/>
+
+<button onclick="calcular4()">Calcular</button>
 </form>
-<div id="superficie" style="
+<div id="largo" style="
+	padding:20px;
+	background-color:pink;
+">
+</div>
+<div id="ancho" style="
 	padding:20px;
 	background-color:pink;
 ">
@@ -16,21 +21,26 @@ Resultado
 </div>
 
 <script>
-function calcular2(){
-	radio=document.getElementById('radio').value;
-	anchura=document.getElementById('anchura').value;
-	parseInt(radio);
-	parseInt(anchura);
-	superficie=((3.14*((parseInt(radio)+parseInt(anchura))*(parseInt(radio)+parseInt(anchura))))-(3.14*(parseInt(radio)*parseInt(radio))));
-	document.getElementById('superficie').innerHTML=superficie+' m2';
+function calcular4(){
+	a=document.getElementById('a').value;
+	x=Math.sqrt((2*a)/9);
+	x=Math.round(x*100)/100;
+	ancho=a/(x*3);
+	ancho=Math.round(ancho*100)/100;
+	document.getElementById('largo').
+	innerHTML=x+' m de ancho (y)';
+	document.getElementById('ancho').
+	innerHTML=ancho+' m de largo (x)';
 }
-calcular2();
+calcular4();
 </script>
 
 <?php
-if(isset($_GET['radio'])){
-	$radio = $_GET['radio'];
-	$anchura = $_GET['anchura'];
-	echo 'Superficie de sendero: '.((3.14*(($radio+$anchura)*($radio+$anchura)))-(3.14*($radio*$radio)));
+if(isset($_GET['a'])){
+	$a = $_GET['a'];
+	echo 'Ancho: '.sqrt((($a*2)/9));
+	echo 'Largo: '.($a/(((sqrt(($a*2)/9)))*3));
 }
 ?>
+
+
