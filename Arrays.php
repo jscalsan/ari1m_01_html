@@ -1,6 +1,10 @@
+<body style=" 
+	background-color:#FFF0C9;
+	">
+
 <h1><center>Arrays</center></h1>
 
-<h2>Crea un array de compañeros, otro de destinos turísticos y asígnalos aleatoriamente mostrando el resultado</h2>
+<h2><center>Crea un array de compañeros, otro de destinos turísticos y asígnalos aleatoriamente mostrando el resultado</center></h2>
 <br/>
 
 <?php
@@ -103,7 +107,8 @@ document.getElementById('destinos_turísticos').innerHTML =destinos_turísticos[
 
 
 
-<h2>Crea un array con los meses del año y muestra el que te indique el usuario a través de un formulario con un campo de texto</h2>
+<h2><center>Crea un array con los meses del año y muestra el que te indique el usuario a través de un formulario con un campo de texto</center></h2>
+
 <form>
 <button>Mostrar</button>
 <input name="mes" id="mes" value="<?=$_GET["mes"]?>"onkeyup="Mostrar()"/>
@@ -154,7 +159,7 @@ mes = [
 	'Diciembre',
 ];
 function Mostrar(){
-	meses=document.getElementById('mes').value;
+	meses=document.getElementById('mes').value=1;
 document.getElementById('t').innerHTML =mes[meses-1];
 }
 Mostrar();
@@ -162,7 +167,7 @@ Mostrar();
 
 
 
-<h2>Crea un array con el nombre de tus compañeros, en qué puesto se sienta y selecciona uno de ellos al azar indicando su nombre y puesto</h2>
+<h2><center>Crea un array con el nombre de tus compañeros, en qué puesto se sienta y selecciona uno de ellos al azar indicando su nombre y puesto</h2>
 <br/>
 
 <?php
@@ -192,22 +197,21 @@ foreach($companeros as $m=>$nombre){
 		if($i==$c)
 			echo $m. '-'.$nombre.'<br/>';
 }
-
 ?>
 </br>
-<div id="r"></div>
+<div id="r3"></div>
 <script>
-companeros= [
+puestos= [
 	'1-Andrei',
 	'2-Fabian',
 	'3-Hector',
 	'4-Gabriel',
 	'5-Nury',
 	'6-Agustina',
-	'7-Jesús',
+	'7-Jesus',
 	'10-Ismael',
 	'8-Daniel',
-	'12-Jesús Alfonso',
+	'12-Jesus Alfonso',
 	'13-Javier',
 	'14-Rodrigo S.',
 	'15-Alvaro',
@@ -215,8 +219,9 @@ companeros= [
 	'17-Ivan',
 	'18-Rodrigo T.',
 ];
-i=Math.random()*(companeros.length -1);
+i=Math.random()*((puestos.length)-1);
 i=Math.round(i);
 console.log(i);
-document.getElementById('r').innerHTML =companeros[i];
+console.log(puestos);
+document.getElementById('r3').innerHTML =puestos[i];
 </script>
