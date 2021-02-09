@@ -159,7 +159,7 @@ mes = [
 	'Diciembre',
 ];
 function Mostrar(){
-	meses=document.getElementById('mes').value=1;
+	meses=document.getElementById('mes').value;
 document.getElementById('t').innerHTML =mes[meses-1];
 }
 Mostrar();
