@@ -1,7 +1,9 @@
 <body style=" 
 	background-color:#FFF0C9;
 	">
-
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maxium-scale=2">
+</head>
 <h1><center>Arrays</center></h1>
 
 <h2><center>Crea un array de compañeros, otro de destinos turísticos y asígnalos aleatoriamente mostrando el resultado</center></h2>
