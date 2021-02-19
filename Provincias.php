@@ -1,3 +1,11 @@
+<body style=" 
+	background-color:#FFF0C9;
+	">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maxium-scale=2">
+</head>
+<h1><center>Provincias</center></h1>
+
 <pre>
 <?php
 $provincias=[
@@ -52,6 +60,8 @@ $provincias=[
 	['Canarias','Las Palmas','1097800','4065'],
 	['Islas Baleares','Baleares','1107220','4991'],
 ];
+
+
 $campos=[
 	'autonomia','provincia','poblacion','superficie'
 ];
@@ -64,3 +74,68 @@ foreach($provincias as $i=>$p) foreach($p as $j=>$dato){
 provincias=<?=json_encode($provincias)?>;
 console.log(provincias);
 </script>
+
+
+
+
+
+
+
+<h2><center>Densidad de población del país</center></h2>
+<br/>
+<?php
+	foreach($poblacion as $var3){
+		if($name = $var3['poblacion']){
+	foreach($superficie as $var4){
+		if($name = $var4['superficie'])	
+	echo 'Densidad de poblacion: '.($var3/$var4);
+	}
+	}
+	}
+?>
+
+
+<h2><center>Automía más extensa</center></h2>
+<br/>
+<?php
+
+
+
+
+?>
+
+<h2><center>Provincias con el mismo nombre que su comunidad autónoma</center></h2>
+<br/>
+<?php
+
+
+
+
+?>
+
+
+<h2><center>¿Qué autonomías tienen provincias con nombre compuesto? Ordenar el resultado alfabéticamente</center></h2>
+<br/>
+<?php
+
+
+
+
+?>
+
+
+
+<h2><center>¿Cuánto mide el nombre de autonomía más corto?</center></h2>
+<br/>
+<?php
+
+$numero = 100;
+$menor = " ";
+foreach($provincias as $var1){
+	if($numero > strlen($var1['autonomia'])){
+		$numero = strlen($var1['autonomia']);
+		$menor=$var1;
+		echo $menor['autonomia'] . " con " . $numero . " caracteres";
+	}
+}
+?>
