@@ -1,3 +1,4 @@
+<div style="font-family:verdana;">
 <body style=" 
 	background-color:#FFF0C9;
 	">
@@ -77,36 +78,67 @@ console.log(provincias);
 
 
 
-
-
-
-
-<h2><center>Densidad de población del país</center></h2>
+<h2><center>37) Densidad de población del país</center></h2>
 <br/>
 <?php
-	foreach($poblacion as $var3){
-		if($name = $var3['poblacion']){
-	foreach($superficie as $var4){
-		if($name = $var4['superficie'])	
-	echo 'Densidad de poblacion: '.($var3/$var4);
+
+	$pob=0;
+	foreach($provincias as $p)
+		$pob+=$p['poblacion'];
+	$sup=0;
+	foreach($provincias as $p)
+		$sup+=$p['superficie'];
+	echo 'Densidad de población de España: '.round(($pob/$sup),2)." habitantes/km2";
+	
+?>
+
+
+<h2><center>45) Automía más extensa</center></h2>
+<br/>
+<?php
+	$autonomias=[];
+	$aut='';
+	foreach ($provincias as $p){
+	if ($aut!=$p['autonomia']){
+	$aut=$p['autonomia'];
+	$autonomias[$aut]['superficie']=0;}
+	$autonomias[$aut]['superficie']+=$p['superficie'];
 	}
+	$dato=0;
+	$dato2=" ";
+	foreach($autonomias as $a=>$m){
+		if($dato <$m ['superficie']){
+			$dato=$m['superficie'];
+			$dato2=$a;
+		}
 	}
+	echo "La autonomía más extensa es: ". $dato2 ." con ". $dato;
+?>
+
+<h2><center>07) Provincias con el mismo nombre que su comunidad autónoma</center></h2>
+<br/>
+<?php
+	foreach ($provincias as $p){
+		if ($p['autonomia']==$p['provincia']){
+			echo $p['provincia'].'<br/>';
+		}
+	}	
+?>
+
+
+<h2><center>14) ¿Qué autonomías tienen provincias con nombre compuesto? Ordenar el resultado alfabéticamente</center></h2>
+<br/>
+<?php
+	$as=[];
+	foreach ($provincias as $p)
+		if (strstr ($p['provincia'],' '))
+		$as[]=$p['autonomia'];
+	asort($as);
+	foreach (array_unique ($as) as $o){
+		echo $o."<br/>";
+		
 	}
-?>
-
-
-<h2><center>Automía más extensa</center></h2>
-<br/>
-<?php
-
-
-
-
-?>
-
-<h2><center>Provincias con el mismo nombre que su comunidad autónoma</center></h2>
-<br/>
-<?php
+		
 
 
 
@@ -114,18 +146,7 @@ console.log(provincias);
 ?>
 
 
-<h2><center>¿Qué autonomías tienen provincias con nombre compuesto? Ordenar el resultado alfabéticamente</center></h2>
-<br/>
-<?php
-
-
-
-
-?>
-
-
-
-<h2><center>¿Cuánto mide el nombre de autonomía más corto?</center></h2>
+<h2><center>29) ¿Cuánto mide el nombre de autonomía más corto?</center></h2>
 <br/>
 <?php
 
@@ -139,3 +160,4 @@ foreach($provincias as $var1){
 	}
 }
 ?>
+</div>

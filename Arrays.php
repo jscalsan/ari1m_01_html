@@ -110,12 +110,12 @@ document.getElementById('destinos_turísticos').innerHTML =destinos_turísticos[
 
 
 <h2><center>Crea un array con los meses del año y muestra el que te indique el usuario a través de un formulario con un campo de texto</center></h2>
-
 <form>
 <button>Mostrar</button>
 <input name="mes" id="mes" value="<?=$_GET["mes"]?>"onkeyup="Mostrar()"/>
 </form>
 <br/>
+
 <?php
 if(!isset($_GET["mes"]))
 	$_GET["mes"]=1;
